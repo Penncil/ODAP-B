@@ -39,7 +39,7 @@ Step 5: Each site then transfers the gradients back to lead site or local site f
 ## References
 [1] Zou, G., 2004. A modified Poisson regression approach to prospective studies with binary data. American journal of epidemiology, 159(7), pp.702-706.
 
-[2]Jordan MI, Lee JD, Yang Y. Communication-efficient distributed statistical inference. J Am Stat Assoc. 2018; 
+[2] Jordan MI, Lee JD, Yang Y. Communication-efficient distributed statistical inference. J Am Stat Assoc. 2018; 
 
 [3] Duan R, Boland MR, Liu Z, Liu Y, Chang HH, Xu H, et al. Learning from electronic health records across multiple sites: A communication-efficient and privacy-preserving distributed algorithm. J Am Med Inform Assoc. 2019; 
 
