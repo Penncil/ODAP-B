@@ -12,19 +12,16 @@ The logistic regression model is a natural choice for modeling binary data and p
 
 We proposed a one-shot distributed algorithm for the modified Poisson regression for binary data. In particular, we are interested in the investigation of rare binary data with the Poisson regression model. Without requiring individual-level data, the proposed distributed algorithm transfers aggregated data across sites once to obtain the estimates of relative risk using the Poisson regression. Along with the consistent estimates of the intervention effects, the sandwich estimation offers a robust variance estimation of the estimated relative risk. 
 
-## Methods
-We propose a one-shot distributed modified Poisson regression approach for binary data and refer to it as ODAP-B. The workflow of the proposed algorithm is presented in the next section. Assume that there are K sites in total. Using methods developed by Jordan et. al [2] and adapted to the clinical setting by Duan et al. [3], we implemented a surrogate likelihood approach, by constructing the surrogate log-likelihood function whereby only local site patient-level data and gradients from other sites are needed. This procedure preserves the patient-level privacy in the data integration process by only transferring aggregated data across sites once. 
-Let ${\theta} = (\alpha,\ \beta,\ {\gamma})$, we construct the surrogate log-likelihood $l_s\left(\{\theta}\right)$ 
+## ODAP-B workflow
+We propose a one-shot distributed modified Poisson regression approach for binary data and refer to it as ODAP-B. The workflow of the proposed algorithm is presented in the figure below. Assume that there are K sites in total. Using methods developed by Jordan et. al [2] and adapted to the clinical setting by Duan et al. [3], we implemented a surrogate likelihood approach, by constructing the surrogate log-likelihood function whereby only local site patient-level data and gradients from other sites are needed. This procedure preserves the patient-level privacy in the data integration process by only transferring aggregated data across sites once. 
+<!-- Let ${\theta} = (\alpha,\ \beta,\ {\gamma})$, we construct the surrogate log-likelihood $l_s\left(\{\theta}\right)$ 
 where $l_1$ is the local log-likelihood, 
 $\nabla$ $l_K(\bar{{\theta}})$ and ${\nabla}^2$ $l_K(\bar{{\theta}})$ are 
 the averages of all K sites’ first gradients and second gradients of log-likelihood functions, respectively, and $\bar{{\theta}}$ is the initial value, 
 which can be obtained by using the local estimate or a meta-estimate of ${\theta}$ and obtain the proposed ODAP-B estimator 
 $\widetilde{{\theta}}.$
-
-## ODAP-B workflow
-
-<img width="973" alt="Screen Shot 2022-06-21 at 10 55 04 PM" src="https://user-images.githubusercontent.com/42978639/174933536-4a18d788-e556-434a-b8e3-3be759e1db18.png">
-
+ -->
+ 
 Step 1: Within each site, we construct the local log-likelihood function only. 
 
 Step 2: For the rare disease data, each site calculates the initial estimate $\hat{\theta}_k$ and 
@@ -35,6 +32,10 @@ Step 3: The meta-estimate 𝜽  is obtained and transferred to all sites.
 Step 4: Each site calculates the first and second gradients with the initial value and local data.
 
 Step 5: Each site then transfers the gradients back to lead site or local site for the construction of surrogate likelihood function. 
+
+
+<img width="973" alt="Screen Shot 2022-06-21 at 10 55 04 PM" src="https://user-images.githubusercontent.com/42978639/174933536-4a18d788-e556-434a-b8e3-3be759e1db18.png">
+
 
 ## References
 [1] Zou, G., 2004. A modified Poisson regression approach to prospective studies with binary data. American journal of epidemiology, 159(7), pp.702-706.
