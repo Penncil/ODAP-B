@@ -20,4 +20,5 @@ $\nabla$ $l_K(\bar{{\theta}})$ and ${\nabla}^2$ $l_K(\bar{{\theta}})$ are
 the averages of all K sites’ first gradients and second gradients of log-likelihood functions, respectively, and $\bar{{\theta}}$ is the initial value, 
 which can be obtained by using the local estimate or a meta-estimate of ${\theta}$ and obtain the proposed ODAP-B estimator 
 $\widetilde{{\theta}}.$
+<img width="468" alt="flow-odapb" src="https://user-images.githubusercontent.com/42978639/174933185-85798889-3a9a-4b2e-a3fe-3413dda27d9d.png">
 
