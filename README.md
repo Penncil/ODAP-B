@@ -22,5 +22,5 @@ which can be obtained by using the local estimate or a meta-estimate of ${\theta
 $\widetilde{{\theta}}.$
 
 ## ODAP-B workflow
-<img width="468" alt="flow-odapb" src="https://user-images.githubusercontent.com/42978639/174933185-85798889-3a9a-4b2e-a3fe-3413dda27d9d.png">
+<img width="900" alt="flow-odapb" src="https://user-images.githubusercontent.com/42978639/174933185-85798889-3a9a-4b2e-a3fe-3413dda27d9d.png">
 
