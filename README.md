@@ -8,7 +8,7 @@ ODAP-B: A One-shot Distributed Algorithm for Modified Poisson Regression for Pro
 ## Background
 When analyzing a relatively rare binary outcome, the sparse data problem is a significant challenge1. The lack of sufficient cases (e.g., patients with disease) in the data leads to a biased estimation of the effect of a treatment in observational studies. To tackle this challenge, traditional two-step meta-analysis is commonly used to combine the results across multiple studies. Meta-analysis provides a summary estimate with greater statistical precision but does not mitigate the sparse-data bias. Although the number of cases is increased by using Individual Participant Data (IPD) meta-analysis, the IPD meta-analysis is not feasible when the individual-level data from different studies cannot be pooled due to privacy concerns. 
 
-The logistic regression model is a natural choice for modeling binary data and provides an odds ratio (OR) for the effect of an intervention or strength of an association by comparing the exposed and unexposed groups. The relative risk (RR) is another metric reporting the effect magnitude of the two groups. The choice between RR and OR is a long-standing debate and RR is preferred over OR for most prospective studies due to collapsibility, especially when the outcome is not rare. Poisson regression is usually recommended to estimate the adjusted relative risk directly10 for binary data as it can be used to approximate the binomial distribution when the sample size is large, and probability is small. Zou [1] proposed a modified Poisson regression with a sandwich error term, which allows the direct estimation of the adjusted relative risk with robust variance estimation even when the Poisson model is misspecified for the binary outcome11. 
+The logistic regression model is a natural choice for modeling binary data and provides an odds ratio (OR) for the effect of an intervention or strength of an association by comparing the exposed and unexposed groups. The relative risk (RR) is another metric reporting the effect magnitude of the two groups. The choice between RR and OR is a long-standing debate and RR is preferred over OR for most prospective studies due to collapsibility, especially when the outcome is not rare. Poisson regression is usually recommended to estimate the adjusted relative risk directly for binary data as it can be used to approximate the binomial distribution when the sample size is large, and probability is small. Zou [1] proposed a modified Poisson regression with a sandwich error term, which allows the direct estimation of the adjusted relative risk with robust variance estimation even when the Poisson model is misspecified for the binary outcome. 
 
 We proposed a one-shot distributed algorithm for the modified Poisson regression for binary data. In particular, we are interested in the investigation of rare binary data with the Poisson regression model. Without requiring individual-level data, the proposed distributed algorithm transfers aggregated data across sites once to obtain the estimates of relative risk using the Poisson regression. Along with the consistent estimates of the intervention effects, the sandwich estimation offers a robust variance estimation of the estimated relative risk. 
 
@@ -27,8 +27,8 @@ $\widetilde{{\theta}}.$
 
 Step 1: Within each site, we construct the local log-likelihood function only. 
 
-Step 2: For the rare disease data, each site calculates the initial estimate $\hat{{\theta_k}}$ and 
-variance $\hat{{\theta_k^2}}$. 
+Step 2: For the rare disease data, each site calculates the initial estimate $\hat{\theta}_k$ and 
+variance $\hat{\sigma}_k^2$. 
 
 Step 3: The meta-estimate 𝜽  is obtained and transferred to all sites. 
 
