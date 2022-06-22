@@ -26,8 +26,13 @@ $\widetilde{{\theta}}.$
 <img width="973" alt="Screen Shot 2022-06-21 at 10 55 04 PM" src="https://user-images.githubusercontent.com/42978639/174933536-4a18d788-e556-434a-b8e3-3be759e1db18.png">
 
 Step 1: Within each site, we construct the local log-likelihood function only. 
+
 Step 2: For the rare disease data, each site calculates the initial estimate 𝜽 ̂_𝑘 and variance 𝜎 ̂_𝑘^2. 
+
 Step 3: The meta-estimate 𝜽 ̅ is obtained and transferred to all sites. 
-Step 4: Each site calculates the first and second gradients with the initial value and local data
+
+Step 4: Each site calculates the first and second gradients with the initial value and local data.
+
 Step 5: Each site then transfers the gradients back to lead site or local site for the construction of surrogate likelihood function. 
+
 
