@@ -29,7 +29,7 @@ Step 1: Within each site, we construct the local log-likelihood function only.
 
 Step 2: For the rare disease data, each site calculates the initial estimate 𝜽 ̂_𝑘 and variance 𝜎 ̂_𝑘^2. 
 
-Step 3: The meta-estimate 𝜽 ̅ is obtained and transferred to all sites. 
+Step 3: The meta-estimate 𝜽  is obtained and transferred to all sites. 
 
 Step 4: Each site calculates the first and second gradients with the initial value and local data.
 
