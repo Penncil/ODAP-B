@@ -27,7 +27,7 @@ $\widetilde{{\theta}}.$
 
 Step 1: Within each site, we construct the local log-likelihood function only. 
 
-Step 2: For the rare disease data, each site calculates the initial estimate 𝜽 ̂_𝑘 and variance 𝜎 ̂_𝑘^2. 
+Step 2: For the rare disease data, each site calculates the initial estimate $\bar{{\theta}}_k$ and variance $\bar{{\theta}^2}_k$. 
 
 Step 3: The meta-estimate 𝜽  is obtained and transferred to all sites. 
 
